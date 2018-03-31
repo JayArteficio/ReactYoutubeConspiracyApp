@@ -1,11 +1,32 @@
 ConspiracyApp notes
 
-git clone SSH link
-          (git@github.com:StephenGrider/ReduxSimpleStarter.git)
-cd tothatprojectname
-npm install
-npm start
-atom .
+1. DL and set-up Boilerplate
+
+    git clone SSH link
+              (git@github.com:StephenGrider/ReduxSimpleStarter.git)
+    cd tothatprojectname
+    npm install
+    npm start
+    atom .
+    delete src folder and make your own src folder and index.js
+
+2. Set-up own git
+  remove existing git file and make your own git
+     >git init
+     >git add .
+     >git commit -m 'initial commit'
+     Make repo in github and connect it
+     >git remote add origin https://github.com/JayArteficio/ReactYoutubeConspiracyApp.git
+     >git push origin master
+
+ 3. Get youtube API key from google developers console
+
+ 4. install package for youtube videos
+
+  >npm install --save youtube-api-search
+  (--save puts it into the package.json file)
+
+
 
 a component = js functions that give out HTML
 
