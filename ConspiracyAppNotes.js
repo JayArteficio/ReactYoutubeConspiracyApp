@@ -29,11 +29,50 @@ ConspiracyApp notes
   5. Create searchBar component
 
   6. State explanation
-    -state is a js object used to react and record to user   events
-    -every class based component has a state object
-    -whenever state is changed, it is re-rendered
-    -firstly, we initialize the state in the constructor function, using this.state = {}
-    -we use the setState method to inform react that the value is chainging  
+    - state is a js object used to react and record to user   events
+    - every class based component has a state object
+    - whenever state is changed, it is re-rendered
+    - firstly, we initialize the state in the constructor function, using this.state = {}
+    - we use the setState method to inform react that the value is changing.  eg. onChange={ event => this.setState({ term: event.target.value...})}
+
+  7. Passing data/props from parent to child component
+    - when we render, we simply do it like so:
+      render() {
+        return (
+          <div>
+            <VideoList videos={this.state.videos} />
+          </div>
+        )
+      }
+
+    - note that in functional components, props are passed as arguements wherein in functional components, they are accessible anywhere via this.props
+
+  8. We use the etag from youtube to give each video a unique key, this is a 'requirement' for react when it builds a list so that it is more efficient. We define the key as a property of VideoListIem.  always add a key for effiency.
+
+    - <VideoListItem key ={video.etag}
+
+  9. ES6
+      const VideoListItem = (props) => {
+        const video = props.video;
+      }
+                **same as**
+
+      const VideoListItem = ({video}) => {
+      }
+
+      "the arguement 'props' has a property called video, grab that video and declare a new variable also called 'video' ".
+
+  10.  ES6 String interpolation
+
+    const url = 'https://www.youtube.com/embed/' + videoId;
+                **same as**
+    const url = `https://www.youtube.com/embed/${videoId}`;
+
+  11. 
+
+
+
+
 
 
 

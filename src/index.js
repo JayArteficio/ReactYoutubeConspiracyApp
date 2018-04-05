@@ -43,12 +43,12 @@ class App extends Component {
   // note ES6 {videos: videos}  is same as {videos}
 
   render() {
-    const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 1000);
+    const videoSearch = _.debounce((term) => { this.videoSearch(term); }, 1000);
 
     return (
       <div>
         <SearchBar onSearchTermChange={videoSearch} />
-        <VideoDetail video={ this.state.selectedVideo} />
+        <VideoDetail video={ this.state.selectedVideo } />
         <VideoList
           onVideoSelect={ selectedVideo => this.setState({ selectedVideo }) }
           videos={ this.state.videos } />
