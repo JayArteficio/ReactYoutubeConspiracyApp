@@ -26,44 +26,60 @@ ConspiracyApp notes
   >npm install --save youtube-api-search
   (--save puts it into the package.json file)
 
+  5. Create searchBar component
+
+  6. State explanation
+    -state is a js object used to react and record to user   events
+    -every class based component has a state object
+    -whenever state is changed, it is re-rendered
+    -firstly, we initialize the state in the constructor function, using this.state = {}
+    -we use the setState method to inform react that the value is chainging  
 
 
-a component = js functions that give out HTML
-
-always import react on top and export the cpomponent on the bottom
 
 
-functional compnent is a 'dumb' component
-eg.
+-a component = js functions that give out HTML
 
-    import React from 'react';
+-always import react on top and export the component on the bottom
 
-    const SearchBar = () => {
-      return <input />;
-    };
+-always one component per file
 
-    export default SearchBar;
+-functional vs. class-based components
+
+    functional component is a 'dumb' component,
+    they just do something
+    eg.
+
+        import React from 'react';
+
+        const SearchBar = () => {
+          return <input />;
+        };
+
+        export default SearchBar;
 
 
-class based components have states or are 'smart'
+    class based components have states or are 'smart'
+    they are self-aware and can react to change
+    eg.
+        import React from 'react';
 
-eg.
-    import React from 'react';
+        class SearchBar extends React.component {
+          render() {
+            return <input />;
+          }
+        };
 
-    class SearchBar extends React.component {
-      render() {
-        return <input />;
-      }
-    };
+        export default SearchBar;
 
-    export default SearchBar;
+- note that:
 
     import React, { Component } from 'react';
+      is same as
+    import React from 'react';
+    const Component = React.Component;
 
-    // same as vv
-    // const Component = React.Component;
-
-On change of the input, run the event handler function
+- On change of the input, run the event handler function
 
     import React, { Component } from 'react';
 

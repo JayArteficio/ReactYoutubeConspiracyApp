@@ -17,6 +17,7 @@ import VideoDetail from './components/video_detail';
 const API_KEY = 'AIzaSyAVzzrm2SeuDkFpuLGidiRNiRktltdUZYw';
 
 //get this api key from google developers console
+//remeber to install the package >npm install --save youtube-api-search
 
 class App extends Component {
   constructor(props) {
