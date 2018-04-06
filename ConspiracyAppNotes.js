@@ -68,10 +68,24 @@ ConspiracyApp notes
                 **same as**
     const url = `https://www.youtube.com/embed/${videoId}`;
 
-  11. 
+  11. Styling good practice, one CSS file per component
+      eg <div className ="search-bar">
 
+        .search-bar {
+          margin: 20px;
+        }
 
+  12. We throttle it so that it's not so laggy
+    lodash is a library with a bunch of useful functions
+      >npm install --save lodash
+      import _ from 'lodash'
 
+    const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
+
+    //lodash.debounce means use the lodash's debounce functio
+    //takes a 'term' and runs the videoSearch func, every 300 milliseconds. then [ass it into onSearchTermChange ]
+
+                      -DONE-
 
 
 

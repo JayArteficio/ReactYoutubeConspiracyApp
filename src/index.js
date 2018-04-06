@@ -28,8 +28,10 @@ class App extends Component {
       selectedVideo: null,
     };
 
-    this.videoSearch('650b road plus ');
-  }
+    this.videoSearch('conspiracy theory');
+  };
+
+  // this is the initial search
 
   videoSearch(term) {
     YTSearch({ key: API_KEY, term: term }, (videos) => {
